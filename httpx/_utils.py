@@ -294,7 +294,7 @@ class Timer:
         if library == "trio":
             import trio
 
-            return trio.current_time()
+            return float(trio.current_time())
         else:
             import asyncio
 

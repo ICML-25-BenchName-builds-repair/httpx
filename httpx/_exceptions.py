@@ -30,6 +30,7 @@ Our exception hierarchy:
   x ResponseNotRead
   x RequestNotRead
 """
+
 import contextlib
 import typing
 
@@ -301,9 +302,7 @@ class StreamClosed(StreamError):
     """
 
     def __init__(self) -> None:
-        message = (
-            "Attempted to read or stream content, but the stream has " "been closed."
-        )
+        message = "Attempted to read or stream content, but the stream has been closed."
         super().__init__(message)
 
 
