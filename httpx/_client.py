@@ -164,7 +164,7 @@ class BaseClient:
         params: typing.Optional[QueryParamTypes] = None,
         headers: typing.Optional[HeaderTypes] = None,
         cookies: typing.Optional[CookieTypes] = None,
-        persistent_cookies: bool = False,
+        persistent_cookies: bool = True,
         timeout: TimeoutTypes = DEFAULT_TIMEOUT_CONFIG,
         follow_redirects: bool = False,
         max_redirects: int = DEFAULT_MAX_REDIRECTS,
@@ -593,7 +593,7 @@ class Client(BaseClient):
     * **cookies** - *(optional)* Dictionary of Cookie items to include when
     sending requests.
     * **persistent_cookies** - *(optional) A boolean indicating if cookies should
-    persist. Defaults to `False`.
+    persist. Defaults to `True`.
     * **verify** - *(optional)* SSL certificates (a.k.a CA bundle) used to
     verify the identity of requested hosts. Either `True` (default CA bundle),
     a path to an SSL certificate file, an `ssl.SSLContext`, or `False`
@@ -630,7 +630,7 @@ class Client(BaseClient):
         params: typing.Optional[QueryParamTypes] = None,
         headers: typing.Optional[HeaderTypes] = None,
         cookies: typing.Optional[CookieTypes] = None,
-        persistent_cookies: bool = False,
+        persistent_cookies: bool = True,
         verify: VerifyTypes = True,
         cert: typing.Optional[CertTypes] = None,
         http1: bool = True,
@@ -1336,7 +1336,7 @@ class AsyncClient(BaseClient):
     * **cookies** - *(optional)* Dictionary of Cookie items to include when
     sending requests.
     * **persistent_cookies** - *(optional) A boolean indicating if cookies should
-    persist. Defaults to `False`.
+    persist. Defaults to `True`.
     * **verify** - *(optional)* SSL certificates (a.k.a CA bundle) used to
     verify the identity of requested hosts. Either `True` (default CA bundle),
     a path to an SSL certificate file, an `ssl.SSLContext`, or `False`
@@ -1375,7 +1375,7 @@ class AsyncClient(BaseClient):
         params: typing.Optional[QueryParamTypes] = None,
         headers: typing.Optional[HeaderTypes] = None,
         cookies: typing.Optional[CookieTypes] = None,
-        persistent_cookies: bool = False,
+        persistent_cookies: bool = True,
         verify: VerifyTypes = True,
         cert: typing.Optional[CertTypes] = None,
         http1: bool = True,
